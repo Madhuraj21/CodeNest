@@ -1,0 +1,105 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: #F3F6F9;
+  background: linear-gradient(135deg, #23283a 0%, #181c24 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #6C63FF;
+  text-decoration: inherit;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #FFD166;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #23283a 0%, #181c24 100%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fredoka', system-ui, sans-serif;
+  color: #6C63FF;
+  letter-spacing: 0.03em;
+}
+
+button {
+  border-radius: 12px;
+  border: 1.5px solid transparent;
+  padding: 0.7em 1.4em;
+  font-size: 1.08em;
+  font-weight: 600;
+  font-family: 'Fredoka', system-ui, sans-serif;
+  background: linear-gradient(90deg, #6C63FF 0%, #FFD166 100%);
+  color: #23283a;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #6C63FF22;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+button:hover {
+  background: linear-gradient(90deg, #FFD166 0%, #6C63FF 100%);
+  color: #23283a;
+  border-color: #FFD166;
+  box-shadow: 0 4px 16px #FFD16633;
+}
+button:focus,
+button:focus-visible {
+  outline: 3px solid #FFD166;
+}
+
+input[type="text"] {
+  background: #23283a;
+  color: #FFD166;
+  border: 2px solid #FFD16644;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1.08em;
+  font-family: 'Fira Mono', 'Fredoka', monospace;
+  margin-top: 8px;
+  transition: border 0.2s, background 0.2s;
+}
+input[type="text"]:focus {
+  border: 2px solid #FFD166;
+  background: #181c24;
+}
+
+pre {
+  font-family: 'Fira Mono', 'Fredoka', monospace;
+  font-size: 1.08em;
+  color: #B9FBC0;
+  background: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: #23283a;
+}
+::-webkit-scrollbar-thumb {
+  background: #6C63FF;
+  border-radius: 8px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #23283a;
+    background: linear-gradient(135deg, #ffffff 0%, #f3f6f9 100%);
+  }
+  a:hover {
+    color: #6C63FF;
+  }
+  button {
+    background: linear-gradient(90deg, #6C63FF 0%, #FFD166 100%);
+    color: #23283a;
+  }
+}
