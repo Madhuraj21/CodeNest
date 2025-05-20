@@ -8,10 +8,6 @@ import Editor from '@monaco-editor/react'
 import { io } from 'socket.io-client'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
-import IconButton from '@mui/material/IconButton'
-import PlayArrowIcon from '@mui/icons-material/PlayArrow'
-import RestartAltIcon from '@mui/icons-material/RestartAlt'
-import CodeIcon from '@mui/icons-material/Code'
 import Snackbar from '@mui/material/Snackbar'
 import MuiAlert from '@mui/material/Alert'
 
@@ -149,7 +145,7 @@ function App() {
         borderBottom: '1.5px solid #23283a',
       }}>
         <Toolbar>
-          <CodeIcon sx={{ fontSize: 32, mr: 1, color: '#6C63FF' }} />
+          <span style={{ fontSize: 32, marginRight: 8 }}>💻</span>
           <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 700, fontFamily: 'Fredoka', letterSpacing: '0.05em', color: '#F3F6F9' }}>
             CodeNest
           </Typography>
@@ -189,7 +185,7 @@ function App() {
             🧩 Snippets
           </Typography>
           {SNIPPETS.map((s, i) => (
-            <Button key={i} variant="outlined" color="secondary" startIcon={<PlayArrowIcon />} sx={{
+            <Button key={i} variant="outlined" color="secondary" startIcon={<span>▶️</span>} sx={{
               textTransform: 'none',
               mb: 1,
               fontWeight: 600,
@@ -203,7 +199,7 @@ function App() {
               '&:hover': { bgcolor: '#FFD16622', borderColor: '#FFD166', color: '#FFD166' },
             }} onClick={() => handleSnippet(s.code)}>{s.name}</Button>
           ))}
-          <Button variant="contained" color="primary" startIcon={<RestartAltIcon />} sx={{
+          <Button variant="contained" color="primary" startIcon={<span>🔄</span>} sx={{
             mt: 2,
             fontWeight: 700,
             borderRadius: 3,
@@ -345,7 +341,7 @@ function App() {
             </Box>
           </Box>
           <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' }, mt: 2 }}>
-            <Button variant="contained" color="secondary" size="large" startIcon={<PlayArrowIcon />} sx={{
+            <Button variant="contained" color="secondary" size="large" startIcon={<span>▶️</span>} sx={{
               fontWeight: 700,
               px: 4,
               fontSize: '1.12em',
