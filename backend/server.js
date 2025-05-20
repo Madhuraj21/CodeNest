@@ -23,7 +23,7 @@ app.use(express.json());
 if (process.env.NODE_ENV === 'production') {
   const clientBuildPath = path.join(__dirname, '../code-editor/dist');
   app.use(express.static(clientBuildPath));
-  app.get('/:path(*)', (req, res) => {
+  app.all('*', (req, res) => {
     res.sendFile(path.join(clientBuildPath, 'index.html'));
   });
 }
