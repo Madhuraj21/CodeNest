@@ -86,7 +86,10 @@ function App() {
   const socketRef = useRef(null)
 
   useEffect(() => {
-    socketRef.current = io('http://localhost:4000')
+    const backendUrl = process.env.NODE_ENV === "production"
+      ? "https://codenest-1-9rst.onrender.com"
+      : "http://localhost:4000";
+    socketRef.current = io(backendUrl)
     socketRef.current.on('terminal:data', (data) => {
       setOutput((prev) => prev + data)
     })
