@@ -57,12 +57,6 @@ A modern, minimal, and responsive online code editor for young coders. Built wit
 3. **Open your browser:**
    Go to [http://localhost:5173](http://localhost:5173)
 
-### Deployment
-
-- Push this repository to GitHub.
-- Deploy the frontend (code-editor) to Vercel, Netlify, or any static host.
-- Deploy the backend (backend) to Render, Railway, or any Node.js host.
-- Update CORS and API URLs as needed for production.
 
 ## License
 
